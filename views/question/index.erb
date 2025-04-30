@@ -1,0 +1,32 @@
+  <div class="container mt-5">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Chat WebSocket en Sinatra</h4>
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <input id="msg" type="text" class="form-control" placeholder="Escribe un mensaje...">
+        </div>
+        <button class="btn btn-success w-100 mb-3" onclick="send()">Enviar</button>
+        <ul id="chat" class="list-group"></ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    const socket = new WebSocket("ws://" + location.host + "/ws");
+
+    socket.onmessage = function(event) {
+      const li = document.createElement("li");
+      li.textContent = event.data;
+      li.classList.add("list-group-item");
+      document.getElementById("chat").appendChild(li);
+    };
+
+    function send() {
+      const input = document.getElementById("msg");
+      if (input.value.trim() !== "") {
+        socket.send(input.value);
+        input.value = "";
+      }
+    }
+  </script>

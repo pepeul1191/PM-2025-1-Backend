@@ -1,5 +1,3 @@
-require_relative 'application_controller'
-
 class TopicController < ApplicationController
   before do
     if request.path_info.start_with?('/apis/v1/topics')
