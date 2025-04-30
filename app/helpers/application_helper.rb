@@ -6,4 +6,8 @@ module ApplicationHelper
   def app_title
     APP_TITLE
   end
+
+  def validate_jwt
+    puts 'TODO: validate_jwt'
+  end
 end
