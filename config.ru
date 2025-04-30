@@ -1,2 +1,5 @@
-require './app'
-run Sinatra::Application
+require_relative 'config/enviroment'
+
+use HomeController
+use QuestionController
+run ApplicationController
