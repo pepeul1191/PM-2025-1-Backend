@@ -1,1 +1,2 @@
 BASE_URL = 'HOLAAA'
+APP_TITLE = 'ULima Quiz'
