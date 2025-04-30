@@ -17,5 +17,6 @@ public/build
 public/fonts
 public/uploads
 tmp
+log
 
 public/vendor

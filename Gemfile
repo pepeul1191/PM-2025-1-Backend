@@ -8,6 +8,7 @@ gem 'puma'
 gem 'require_all'
 gem 'sequel'
 gem 'sqlite3'
+gem 'dotenv'
 group :development do
   gem 'rerun'
 end
