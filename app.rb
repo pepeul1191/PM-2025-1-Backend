@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/' do
-  'Hola Mundo desde Sinatra???'
+  'Hola Mundo desde Sinatra'
 end
